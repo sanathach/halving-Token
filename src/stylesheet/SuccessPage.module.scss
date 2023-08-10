@@ -1,0 +1,117 @@
+$primary-color: #27aae1;
+$font-style: "Fira Code", monospace;
+.successPage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logoImg {
+        height: 60px;
+        width: auto;
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        z-index: 1;
+    }
+    .successPageLeft {
+        width: 50%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .successPageTitle {
+            h1 {
+            }
+            p {
+            }
+        }
+        .successPageInput {
+            display: flex;
+            flex-direction: column;
+            p {
+                margin: 8px 0;
+                font-size: 14px;
+            }
+            input {
+                height: 50px;
+                margin: 8px 0;
+                border-radius: 10px;
+                border: 1px solid #979797;
+                outline: none;
+                font-family: $font-style;
+                color: 737373;
+                font-size: 16px;
+                padding: 0 10px;
+                text-transform: uppercase;
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+            }
+            button {
+                height: 50px;
+                width: max-content;
+                font-size: 16px;
+                padding: 0 36px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                background-color: $primary-color;
+                font-family: $font-style;
+                color: white;
+                margin: 8px 0;
+                cursor: pointer;
+                &:disabled {
+                    background-color: #81d9ff;
+                    cursor: no-drop;
+                }
+            }
+        }
+    }
+    .successPageRight {
+        width: 40%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .successPageImageContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.connectButton {
+    width: 100%;
+    height: 60px;
+    background-color: $primary-color;
+    font-family: $font-style;
+    color: white;
+    font-size: 18px;
+    padding: 0 36px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    div {
+        background-color: #fcfcfc;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        img {
+            width: 16px;
+        }
+    }
+}

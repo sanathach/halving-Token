@@ -1,0 +1,102 @@
+$font-style: "Fira Code", monospace;
+.sidebar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .sidebarBar {
+        border-right: 1px solid #e2e2e2;
+        height: 100%;
+        width: 300px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logoImg {
+            height: 60px;
+            width: auto;
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1;
+        }
+        .sidebarBarMenu {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 60%;
+            width: 100%;
+            .sidebarBarMenubutton {
+                height: 68px;
+                border: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0 18px;
+                font-size: 18px;
+                font-family: $font-style;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #263238;
+                background-color: transparent;
+                svg {
+                    margin-right: 15px;
+                }
+                &:hover {
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                }
+            }
+            .selectedSidebarBarMenubutton {
+                background-color: #242424;
+                color: #f5f5f5;
+                box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.25);
+                height: 68px;
+                border: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0 18px;
+                font-size: 18px;
+                font-family: $font-style;
+                border-radius: 10px;
+                cursor: pointer;
+                svg {
+                    margin-right: 15px;
+                }
+            }
+        }
+        .sidebarBarBottom {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: inherit;
+            height: 140px;
+            justify-content: space-evenly;
+            svg {
+                margin-right: 10px;
+            }
+            button {
+                height: 32px;
+                font-family: $font-style;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                color: #263238;
+                cursor: pointer;
+                svg {
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .sidebarChildren {
+        height: 100%;
+        flex: 1;
+    }
+}

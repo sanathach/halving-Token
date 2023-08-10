@@ -1,0 +1,264 @@
+$primary-color: #27aae1;
+$font-style: "Fira Code", monospace;
+.createAccount {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .image {
+        height: 100%;
+        background-size: contain;
+    }
+    .logoImg {
+        height: 60px;
+        width: auto;
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        z-index: 1;
+    }
+    .createAccountContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        .createAccountContentInner {
+            min-width: 380px;
+            width: 50%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            .createAccountContentInnerh2 {
+                font-size: 38px;
+            }
+            .createAccountInputNameContainer {
+                display: flex;
+                justify-content: space-between;
+                .createAccountInputName {
+                    width: 46%;
+                    border: 5;
+                    border-bottom: 1px solid #e0e0e0;
+                    border-radius: 5;
+                    outline: none;
+                    &::placeholder {
+                        font-family: $font-style;
+                        color: #7a7a7a;
+                    }
+                    &:focus {
+                        box-shadow: 0px 1px 0px 0px $primary-color;
+                    }
+                }
+            }
+            .createAccountContentInnerp {
+                margin-bottom: 24px;
+            }
+            .googleLoginButton {
+                height: 50px;
+                font-family: $font-style;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .localLoginButton {
+                height: 50px;
+                font-family: $font-style;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                color: #fff;
+            }
+            .createAccountDivider {
+                font-family: $font-style;
+                font-size: 16px;
+                color: #7a7a7a;
+            }
+            .createAccountInput {
+                border: 0;
+                border-bottom: 1px solid #e0e0e0;
+                border-radius: 0;
+                outline: none;
+                &::placeholder {
+                    font-family: $font-style;
+                    color: #7a7a7a;
+                }
+                &:focus {
+                    box-shadow: 0px 1px 0px 0px $primary-color;
+                }
+            }
+
+            .createAccountSignupOption {
+                text-align: center;
+                margin-top: 100px;
+                span {
+                    margin-left: 5px;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .verifyAccountContentInner {
+            min-width: 380px;
+            width: 50%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            .verifyAccountContentInnerh2 {
+                font-size: 38px;
+            }
+            .verifyAccountContentInnerp {
+                margin-bottom: 24px;
+            }
+            .verifyAccountOption {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    font-size: 14px;
+                    color: #7a7a7a;
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .localLoginButton {
+                height: 50px;
+                font-family: $font-style;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                color: #fff;
+            }
+            .verifyAccountInput {
+                border: 5;
+                border-bottom: 1px solid #e0e0e0;
+                border-radius: 0;
+                outline: none;
+                &::placeholder {
+                    font-family: $font-style;
+                    color: #7a7a7a;
+                }
+                &:focus {
+                    box-shadow: 0px 1px 0px 0px $primary-color;
+                }
+            }
+        }
+    }
+    @media (max-width: 1110px) {
+        .image {
+            display: none;
+        }
+    }
+    @media (max-width: 390px) {
+        .image {
+            display: none;
+        }
+        .createAccountContent {
+            .createAccountContentInner {
+                min-width: 280px;
+                .createAccountContentInnerh2 {
+                    font-size: 26px;
+                }
+                .createAccountContentInnerp {
+                    font-size: 14px;
+                }
+                .createAccountOption {
+                    .createAccountCheckBoxContainer {
+                        .createAccountCheckBox {
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                        .createAccountCheckBoxText {
+                            font-size: 12px;
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .createAccountSignupOption {
+                    font-size: 12px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: center;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slideInRight {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.otpGroup {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+    .otpInputGroup {
+        display: flex;
+        text-align: center;
+        border: 0;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 0;
+        outline: none;
+        width: 50px;
+        &::placeholder {
+            font-family: $font-style;
+            color: #7a7a7a;
+        }
+        &:focus {
+            box-shadow: 0px 1px 0px 0px $primary-color;
+        }
+    }
+}
